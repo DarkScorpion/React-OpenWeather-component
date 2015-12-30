@@ -12,7 +12,7 @@ var ReactWeather = React.createClass({
       if ( self.isMounted() ) {
         self.setState({
           temp: result.main.temp,
-          //icon: result.weather.icon,
+          icon: result.weather[0].icon,
           pressure: result.main.pressure,
           humidity: result.main.humidity
         });
@@ -29,9 +29,11 @@ var ReactWeather = React.createClass({
   
   render: function () {
     var state = this.state;
+    var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png'
     console.log(state);
     return (
       <p>
+        <span>Погода: <img src={iconLink} /></span>
         <span>Температура: {state.temp}</span>
         <span>Влажность: {state.humidity}</span>
         <span>Давление: {state.pressure}</span>

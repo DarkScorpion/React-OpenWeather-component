@@ -9,10 +9,12 @@ var ReactWeather = React.createClass({
   componentDidMount: function() {
     var self = this;
     self._getCityWeather('London', function(result) {
-      console.log(result);
       if ( self.isMounted() ) {
         self.setState({
-          temp: result.coord.lat
+          temp: result.main.temp,
+          //icon: result.weather.icon,
+          pressure: result.main.pressure,
+          humidity: result.main.humidity
         });
       }
     });
@@ -29,7 +31,11 @@ var ReactWeather = React.createClass({
     var state = this.state;
     console.log(state);
     return (
-      <h4>AAAA: {state.temp}</h4>
+      <p>
+        <span>Температура: {state.temp}</span>
+        <span>Влажность: {state.humidity}</span>
+        <span>Давление: {state.pressure}</span>
+      </p>
     );
   }
 });

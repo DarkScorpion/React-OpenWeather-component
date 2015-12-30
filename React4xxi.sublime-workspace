@@ -1,0 +1,1109 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pr",
+				"pressure"
+			],
+			[
+				"h",
+				"humidity"
+			],
+			[
+				"s",
+				"span"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"r",
+				"return"
+			],
+			[
+				"w",
+				"weather"
+			],
+			[
+				"U",
+				"userLocation"
+			],
+			[
+				"ge",
+				"getCityWeather"
+			],
+			[
+				"get",
+				"getFormObject"
+			],
+			[
+				"form",
+				"formArr"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"for",
+				"form	Tag"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"p",
+				"padding-right"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"con",
+				"commentsConfig"
+			],
+			[
+				"co",
+				"configFile"
+			],
+			[
+				"file_",
+				"file_get_contents"
+			],
+			[
+				"F",
+				"FORM_ID"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"resu",
+				"resultId"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"re",
+				"resultUrl"
+			],
+			[
+				"_",
+				"_defaultReplace"
+			],
+			[
+				"del",
+				"delPattern"
+			],
+			[
+				"preg",
+				"preg_replace"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"C",
+				"CFormAnswerHelper"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"def",
+				"defaultAnswer"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"align",
+				"text-align"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ch",
+				"checkbox1.png	w:60 h:60"
+			],
+			[
+				"spa",
+				"span	Tag"
+			],
+			[
+				"ba",
+				"background-repeat"
+			],
+			[
+				"cl",
+				"class	Attr"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"ans",
+				"answer"
+			],
+			[
+				"_m",
+				"_min"
+			],
+			[
+				"req",
+				"require〔function〕"
+			],
+			[
+				"don",
+				"doneAllLesons〔function〕"
+			],
+			[
+				"_co",
+				"_cookie〔variable〕"
+			],
+			[
+				"d",
+				"dic"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"cr",
+				"create2dArray"
+			],
+			[
+				"a",
+				"arrLength2"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"test",
+				"testBody〔variable〕"
+			],
+			[
+				"te",
+				"testApi"
+			],
+			[
+				"sta",
+				"state〔argument〕"
+			],
+			[
+				"key",
+				"keyCode"
+			],
+			[
+				"de",
+				"denyKey"
+			],
+			[
+				"acc",
+				"accDeny"
+			],
+			[
+				"c",
+				"cancelKey"
+			],
+			[
+				"sel",
+				"selfClass〔variable〕"
+			],
+			[
+				"set",
+				"setState"
+			],
+			[
+				"G",
+				"Granted"
+			],
+			[
+				"cur",
+				"currentText〔variable〕"
+			],
+			[
+				"pro",
+				"props"
+			],
+			[
+				"M",
+				"MouseConstraint"
+			],
+			[
+				"col",
+				"colorOptions〔variable〕"
+			],
+			[
+				"Bod",
+				"Body"
+			],
+			[
+				"bo",
+				"boxA"
+			],
+			[
+				"fu",
+				"fullText"
+			],
+			[
+				"curren",
+				"currentText"
+			],
+			[
+				"cu",
+				"currentText"
+			],
+			[
+				"error",
+				"error404"
+			],
+			[
+				"ke",
+				"keyCode"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"u",
+				"use"
+			],
+			[
+				"D",
+				"DOM"
+			],
+			[
+				"cli",
+				"clickCount"
+			],
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"n",
+				"notSet"
+			],
+			[
+				"sm",
+				"smsRequest"
+			],
+			[
+				"nu",
+				"number"
+			],
+			[
+				"las",
+				"lastName〔variable〕"
+			],
+			[
+				"m",
+				"main"
+			],
+			[
+				"mo",
+				"models"
+			],
+			[
+				"ne",
+				"newUser"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"Use",
+				"UserSchema〔variable〕"
+			],
+			[
+				"getlo",
+				"getLocation"
+			],
+			[
+				"htt",
+				"http"
+			],
+			[
+				"consol",
+				"consoleDiv"
+			],
+			[
+				"CON",
+				"console"
+			],
+			[
+				"fil",
+				"filePath"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"code",
+				"codeGen"
+			],
+			[
+				"div",
+				"divBlocks"
+			],
+			[
+				"blin",
+				"blinkIterval"
+			],
+			[
+				"sen",
+				"sendEmail"
+			],
+			[
+				"js",
+				"jsMail"
+			],
+			[
+				"cod",
+				"codeBlocks"
+			],
+			[
+				"ht",
+				"httpSmsRequest"
+			],
+			[
+				"sms",
+				"sendSmsRequest"
+			],
+			[
+				"i",
+				"iTime"
+			],
+			[
+				"I",
+				"iTime"
+			],
+			[
+				"ar",
+				"arParams"
+			],
+			[
+				"al",
+				"vertical-align"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"e",
+				"emit"
+			],
+			[
+				"b",
+				"border-spacing"
+			],
+			[
+				"borde",
+				"border-color"
+			],
+			[
+				"colo",
+				"border-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "script.js",
+			"settings":
+			{
+				"buffer_size": 1390,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 484,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "Package Control: in",
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: isn",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Build: Build"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"'node app.js'",
+			"node app.js",
+			"clc",
+			"git status",
+			"cls",
+			"clc",
+			"clear",
+			"wall",
+			"ls",
+			"dir"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Programing/MyProject/React4xxi"
+	],
+	"file_history":
+	[
+		"/D/Programing/PHP/ARTK/local/templates/artk/header.php",
+		"/D/Programing/PHP/ARTK/test/index.php",
+		"/D/Programing/PHP/ARTK/form/.leftservices.menu.php",
+		"/D/Programing/PHP/ARTK/form/index.php",
+		"/D/Programing/PHP/ARTK/form/list.php",
+		"/D/Programing/PHP/ARTK/local/components/alex/form.pdf.create/.parameters.php",
+		"/D/Programing/PHP/ARTK/form/view.php",
+		"/D/Programing/MyProject/CalcARTK/script.js",
+		"/D/Programing/MyProject/CalcARTK/index.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/mail-it",
+		"/D/Programing/MyProject/CalcARTK jQuery/index.html",
+		"/D/Programing/MyProject/CalcARTK jQuery/script.js",
+		"/D/Programing/MyProject/CalcARTK jQuery/styles.css",
+		"/D/Programing/MyProject/Calculate ARTK jQuery/styles.css",
+		"/D/Programing/MyProject/Calculate ARTK jQuery/script.js",
+		"/D/Programing/MyProject/Calculate ARTK jQuery/index.html",
+		"/D/Programing/PHP/ARTK/local/templates/artk/assets/js/jquery-2.1.1.min.js",
+		"/D/Programing/MyProject/PassListGen/pass-list-gen.ps1",
+		"/D/Programing/MyProject/Calculate ARTK/index.html",
+		"/D/Programing/MyProject/Calculate ARTK/script.js",
+		"/C/Documents and Settings/Admin/Рабочий стол/Калькуляторы/Calculate ARTK/styles.css",
+		"/C/Documents and Settings/Admin/Рабочий стол/Калькуляторы/Calculate ARTK/script.js",
+		"/C/Documents and Settings/Admin/Рабочий стол/Калькуляторы/Calculate ARTK/index.html",
+		"/D/Programing/MyProject/TrueCrypt Hack/Run.ps1",
+		"/D/Programing/NodeJS/Hacker/views/react.jade",
+		"/D/Programing/PHP/ARTK/local/components/alex/form.pdf.create/component.php",
+		"/D/Programing/PHP/ARTK/local/templates/artk/template_styles.css",
+		"/D/Programing/PHP/ARTK/design/25.php",
+		"/D/Programing/PHP/ARTK/design/13.php",
+		"/D/Programing/PHP/ARTK/README.txt",
+		"/D/Programing/PHP/ARTK/design/10.php",
+		"/D/Programing/PHP/ARTK/local/components/alex/form.pdf.create/templates/.default/template.php",
+		"/D/Programing/PHP/ARTK/design/6.php",
+		"/D/Programing/PHP/ARTK/pdf/2.html",
+		"/D/Programing/PHP/ARTK/design/2.php",
+		"/D/Programing/NodeJS/GeekBrains/config.json",
+		"/C/Documents and Settings/Admin/Рабочий стол/Defence/script.js",
+		"/C/Documents and Settings/Admin/Рабочий стол/Defence/obus.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/Defence/def2.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/Defence/def1.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/Defence/def.html",
+		"/D/Programing/NodeJS/PhotoSmash/socket-routs.js",
+		"/D/Programing/NodeJS/Pikanode/routes.js",
+		"/C/Documents and Settings/Admin/Рабочий стол/def.html",
+		"/D/Programing/PHP/ARTK/design/14.php",
+		"/C/Documents and Settings/Admin/Рабочий стол/help image.html",
+		"/D/Programing/PHP/ARTK/design/26.php",
+		"/D/Programing/PHP/ARTK/pdf/26.html",
+		"/D/Programing/PHP/ARTK/local/components/alex/modal.button/templates/.default/template.php",
+		"/D/Programing/PHP/ARTK/design/17.php",
+		"/D/Programing/PHP/ARTK/local/components/alex/form.pdf.create/lib/Tempi.php",
+		"/D/Programing/PHP/ARTK/pdf/6.html",
+		"/D/Programing/PHP/ARTK/design/8.php",
+		"/D/Programing/PHP/ARTK/design/12.php",
+		"/D/Programing/PHP/ARTK/design/11.php",
+		"/D/Programing/PHP/ARTK/design/9.php",
+		"/D/Programing/PHP/ARTK/design/5.php",
+		"/C/Documents and Settings/Admin/Рабочий стол/для сертификата почты",
+		"/C/Documents and Settings/Admin/Рабочий стол/component.php",
+		"/D/Programing/PHP/ARTK/local/templates/artk/components/bitrix/form.result.list.my/.default/result_modifier.php",
+		"/D/Programing/PHP/ARTK/form/comments.json",
+		"/D/Programing/PHP/ARTK/local/templates/artk/components/bitrix/form.result.list.my/.default/component.php",
+		"/D/Programing/PHP/ARTK/local/templates/artk/components/bitrix/form.result.list.my/.default/template.php",
+		"/C/Documents and Settings/Admin/Рабочий стол/table.html",
+		"/D/Programing/PHP/ARTK/local/templates/artk/components/bitrix/form.result.view/.default/template.php",
+		"/D/Programing/PHP/ARTK/local/templates/artk/components/bitrix/form.result.new/.default/template.php",
+		"/D/Programing/PHP/ARTK/pdf/14.html",
+		"/D/Programing/PHP/ARTK/pdf/5.html",
+		"/D/Programing/PHP/ARTK/local/components/alex/form.pdf.create/lib/CFormHelper.php",
+		"/D/Programing/PHP/ARTK/pdf/8.html",
+		"/D/Programing/PHP/form/install/index.php",
+		"/D/Programing/PHP/form/install/include.php",
+		"/D/Programing/PHP/form/install/options.php",
+		"/D/Programing/PHP/form/install/version.php",
+		"/D/Programing/PHP/ARTK/pdf/13.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/f_rights.php",
+		"/D/Programing/PHP/ARTK/pdf/9.html",
+		"/D/Programing/PHP/ARTK/pdf/10.html",
+		"/D/Programing/PHP/ARTK/pdf/11.html",
+		"/D/Programing/PHP/ARTK/pdf/12.html",
+		"/D/Programing/PHP/ARTK/local/components/alex/modal.button/templates/.default/style.css",
+		"/D/Programing/PHP/ARTK/pdf/var names",
+		"/D/Programing/PHP/ARTK/pdf/style.css",
+		"/D/Programing/PHP/ARTK/pdf/1.html",
+		"/D/Programing/PHP/ARTK/local/components/alex/form.pdf.create/.description.php",
+		"/D/Programing/PHP/Tempi/Tempi/Tempi.php",
+		"/D/Programing/PHP/ARTK/.gitignore",
+		"/D/Programing/PHP/ARTK/design/form disign.php",
+		"/D/Programing/PHP/ARTK/local/components/alex/form.pdf.create/lib/CFormAnswerHelper.php",
+		"/D/Programing/PHP/ARTK/local/templates/artk/components/bitrix/form.result.view/templates/.default/template.php",
+		"/D/Programing/PHP/ARTK/local/components/alex/modal.button/templates/.default/script.js",
+		"/C/Documents and Settings/Admin/Рабочий стол/aaa/test.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/test.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/test/test.txt",
+		"/C/Documents and Settings/Admin/Рабочий стол/form disign.php",
+		"/C/OpenServer/domains/bx1.z/local/components/alex/form.pdf.create/lib/CFormAnswerHelper.php",
+		"/C/OpenServer/domains/bx1.z/bitrix/components/bitrix/form.result.new/templates/.default/template.php",
+		"/C/OpenServer/domains/bx1.z/bitrix/components/bitrix/form.result.new/component.php",
+		"/C/OpenServer/domains/bx1.z/form/result_list.php",
+		"/D/Programing/NodeJS/Hacker/views/photo.jade",
+		"/D/Programing/NodeJS/Hacker/lib/photo.js",
+		"/D/Programing/NodeJS/Hacker/routes.js",
+		"/D/Programing/NodeJS/Hacker/.gitignore",
+		"/D/Programing/NodeJS/Hacker/lib/email.js",
+		"/D/Programing/NodeJS/Hacker/api-routes.js",
+		"/D/Programing/NodeJS/GeekBrains/doneLesons.js",
+		"/C/Documents and Settings/Admin/Рабочий стол/1.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/seafight.html",
+		"/C/Documents and Settings/Admin/Рабочий стол/dz1.txt",
+		"/C/Documents and Settings/Admin/Рабочий стол/dz1",
+		"/D/Programing/NodeJS/GeekBrains/.gitignore",
+		"/D/Programing/NodeJS/GeekBrains/README",
+		"/D/Programing/NodeJS/Exist/items-parser.js",
+		"/D/Programing/NodeJS/Exist/cookie.json",
+		"/D/Programing/NodeJS/GeekBrains/1.txt",
+		"/D/Programing/NodeJS/Exist/test.json",
+		"/D/Programing/NodeJS/Hacker/app.js",
+		"/D/Programing/NodeJS/Exist/config.json",
+		"/D/Programing/NodeJS/GeekBrains/items-parser.js",
+		"/D/Programing/NodeJS/Hacker/lib/util.js",
+		"/D/Programing/NodeJS/Hacker/.afignore",
+		"/C/OpenServer/domains/portfolio.z/index.html",
+		"/D/tc/dic.txt",
+		"/D/tc/.gitignore",
+		"/D/Programing/NodeJS/Exist/parse-object.ps1",
+		"/D/tc/run.ps1",
+		"/D/tc/консоль help.txt",
+		"/D/Programing/NodeJS/Hacker/views/sapper.jade"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\Programing\\NodeJS\\Hacker",
+			"D:\\Programing\\NodeJS\\Nodejs_game"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"o.fn.extend",
+			"this",
+			"seria",
+			"arro",
+			"<bbbb>",
+			"\\n",
+			"<br>",
+			"arrow-select",
+			"select",
+			"col-50",
+			"arrow-select",
+			"select",
+			"col-50",
+			".cent",
+			"</li>",
+			"ваго",
+			"упак",
+			"}}}",
+			"{{{",
+			"}",
+			"{",
+			"raw",
+			"\"raw\"",
+			"center",
+			".cente",
+			"cente",
+			"CarModel",
+			" {}",
+			"col-",
+			"width: 100",
+			"$v",
+			"HTML_CODE",
+			"newG",
+			"_gid",
+			"service 1",
+			"servise 1",
+			"work to",
+			"bg space",
+			"space",
+			"spice",
+			".site-building",
+			"section",
+			"row",
+			"&",
+			"request.get",
+			" ×",
+			"==",
+			"sp",
+			"colors",
+			"iTi",
+			"console.log(",
+			"this",
+			"sp.i(",
+			"_user",
+			"User",
+			"sp.d",
+			"dtime",
+			"config",
+			"$(\"#console\")",
+			"this",
+			"content",
+			"text",
+			"content",
+			"consoleText",
+			"consDiv",
+			"consoleDiv",
+			"*/\n",
+			"4",
+			"favic",
+			"sms",
+			"({\n",
+			"{",
+			"served static content",
+			"socket.io-client",
+			"update",
+			"vint",
+			"= =",
+			"="
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\n",
+			"<bbbb>",
+			"\\n",
+			"width-49",
+			"</a></li>",
+			"}}",
+			"{{",
+			"row",
+			"\"row\"",
+			"",
+			"$fieldArr",
+			"_guid",
+			"testUrl",
+			",",
+			"log.info(",
+			"db.User",
+			"_user",
+			"_config",
+			"text",
+			"content",
+			"console",
+			"consDiv",
+			"==",
+			" =",
+			" = "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "script.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "React4xxi.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Programing\\PHP\\ARTK\\ARTK.sublime-project"
+			],
+			[
+				"oth",
+				"D:\\Programing\\Soft\\Sublime Text 3\\Other.sublime-project"
+			],
+			[
+				"ph",
+				"D:\\Programing\\NodeJS\\PhotoSmash\\PhotoSmash.sublime-project"
+			],
+			[
+				"wi",
+				"D:\\Programing\\NodeJS\\Widget\\Widget.sublime-project"
+			],
+			[
+				"h",
+				"C:\\Soft\\Sublime Text 3\\hacker.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

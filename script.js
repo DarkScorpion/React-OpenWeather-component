@@ -19,8 +19,10 @@ var ReactWeather = React.createClass({
   },
 
   _getCityWeather: function(city, cb) {
-    var url = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=2de143494c0b295cca9337e1e96b00e0'
-    $.get(url, cb);
+    var appid = '2de143494c0b295cca9337e1e96b00e0';
+    var url = 'http://api.openweathermap.org/data/2.5/weather';
+    
+    $.get(url, {q: city, appid: appid}, cb);
   },
   
   render: function () {

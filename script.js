@@ -46,11 +46,3 @@ ReactDOM.render(
   <ReactWeather />,
   document.getElementById('ReactWeather')
 );
-
-/*
-var url = 'http://api.openweathermap.org/data/2.5/weather?q=London&appid=2de143494c0b295cca9337e1e96b00e0'
-$.get(url, function(data) {
-  console.log(data);
-});
-*/
-//Иконки: http://openweathermap.org/img/w/10d.png

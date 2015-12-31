@@ -32,12 +32,14 @@ var ReactWeather = React.createClass({
     var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png'
     console.log(state);
     return (
-      <p>
-        <span>Погода: <img src={iconLink} /></span>
-        <span>Температура: {state.temp}</span>
-        <span>Влажность: {state.humidity}</span>
-        <span>Давление: {state.pressure}</span>
-      </p>
+      <div>
+        <div><img src={iconLink} /></div>
+        <div>
+          <span>Влажность: {state.humidity} </span><br/>
+          <span>Давление: {state.pressure} </span><br/>
+          <span>Температура: {state.temp} </span><br/>
+        </div>
+      </div>
     );
   }
 });

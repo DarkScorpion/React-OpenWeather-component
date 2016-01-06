@@ -28,13 +28,14 @@ var ReactWeather = React.createClass({
   },
 
   _getCitysFromStorage: function() {
-    localStorage['citysArr'] = '{"a":"cbbb"}';
-    console.log(JSON.parse(localStorage['citysArr']));
-    /*
+    //localStorage.removeItem('citysArr');
+    if(typeof localStorage['citysArr'] === 'undefined') {
+      localStorage['citysArr'] = '[]';
+    }
+
     this.setState({
       citysArr: JSON.parse(localStorage['citysArr'])
     });
-  */
   },
 
   _setCitysToStorage: function() {

@@ -1,14 +1,14 @@
 
 var ReactWeather = React.createClass({
   getInitialState: function() {
-    return { 
-      userLocation: 'London',
-      citysArr: []
+    return {
+      citysArr: [],
+      userLocation: 'London'
     };
   },
 
   componentDidMount: function() {
-    this._getCitysArr();
+    this._getCitysFromStorage();
 
     var self = this;
     self._getCityWeather('London', function(result) {
@@ -24,16 +24,21 @@ var ReactWeather = React.createClass({
   },
 
   componentWillUnmount: function() {
-    this._setCitysArr();
+    this._setCitysToStorage();
   },
 
-  _getCitysArr: function() {
-    this.setState(JSON.parse(localStorage['citysArr']));
+  _getCitysFromStorage: function() {
+    localStorage['citysArr'] = '{"a":"cbbb"}';
+    console.log(JSON.parse(localStorage['citysArr']));
+    /*
+    this.setState({
+      citysArr: JSON.parse(localStorage['citysArr'])
+    });
+  */
   },
 
-  _setCitysArr: function() {
-    localStorage['citysArr'] = JSON.stringify(this.state);
-    //localStorage.setItem('ticker', JSON.stringify(this.state));
+  _setCitysToStorage: function() {
+    localStorage['citysArr'] = JSON.stringify(this.state.citysArr);
   },
 
   _getCityWeather: function(city, cb) {

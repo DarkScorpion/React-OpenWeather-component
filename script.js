@@ -51,6 +51,10 @@ var ReactWeather = React.createClass({
   },
 
   _addCity: function(city) {
+    if(city === '') {
+      return
+    }
+
     this.setState(function(state) {
       var temp = state.citiesArr;
       temp.push(city);

@@ -23,12 +23,13 @@ var ReactWeather = React.createClass({
     });
   },
 
-  componentWillUnmount: function() {
+  componentDidUpdate: function() {
     this._setCitysToStorage();
   },
 
   _getCitysFromStorage: function() {
     //localStorage.removeItem('citiesArr');
+    console.log(localStorage['citiesArr']);
     if(typeof localStorage['citiesArr'] === 'undefined') {
       localStorage['citiesArr'] = '[]';
     }
@@ -51,13 +52,16 @@ var ReactWeather = React.createClass({
 
   _addCity: function(city) {
     this.setState(function(state) {
-      state.citiesArr = state.citysArr.push(city);
+      var temp = state.citiesArr;
+      temp.push(city);
+      state.citiesArr = temp;
     });
   },
 
   inputHanler: function(event) {
     var str = document.getElementById("addCity").value;
     console.log('inputHandler activate: ' + str);
+    this._addCity(str);
   },
   
   render: function () {

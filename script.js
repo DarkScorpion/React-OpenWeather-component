@@ -42,6 +42,12 @@ var ReactWeather = React.createClass({
     
     $.get(url, {q: city, appid: appid}, cb);
   },
+
+  _addCity: function(city) {
+    this.setState(function(state) {
+      state.citysArr = state.citysArr.push(city);
+    });
+  },
   
   render: function () {
     var state = this.state;

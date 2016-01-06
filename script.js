@@ -2,7 +2,7 @@
 var ReactWeather = React.createClass({
   getInitialState: function() {
     return {
-      citysArr: [],
+      citiesArr: [],
       userLocation: 'London'
     };
   },
@@ -28,18 +28,18 @@ var ReactWeather = React.createClass({
   },
 
   _getCitysFromStorage: function() {
-    //localStorage.removeItem('citysArr');
-    if(typeof localStorage['citysArr'] === 'undefined') {
-      localStorage['citysArr'] = '[]';
+    //localStorage.removeItem('citiesArr');
+    if(typeof localStorage['citiesArr'] === 'undefined') {
+      localStorage['citiesArr'] = '[]';
     }
 
     this.setState({
-      citysArr: JSON.parse(localStorage['citysArr'])
+      citiesArr: JSON.parse(localStorage['citiesArr'])
     });
   },
 
   _setCitysToStorage: function() {
-    localStorage['citysArr'] = JSON.stringify(this.state.citysArr);
+    localStorage['citiesArr'] = JSON.stringify(this.state.citiesArr);
   },
 
   _getCityWeather: function(city, cb) {
@@ -51,7 +51,7 @@ var ReactWeather = React.createClass({
 
   _addCity: function(city) {
     this.setState(function(state) {
-      state.citysArr = state.citysArr.push(city);
+      state.citiesArr = state.citysArr.push(city);
     });
   },
   

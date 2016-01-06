@@ -54,6 +54,11 @@ var ReactWeather = React.createClass({
       state.citiesArr = state.citysArr.push(city);
     });
   },
+
+  inputHanler: function(event) {
+    var str = document.getElementById("addCity").value;
+    console.log('inputHandler activate: ' + str);
+  },
   
   render: function () {
     var state = this.state;
@@ -66,6 +71,10 @@ var ReactWeather = React.createClass({
           <span>Влажность: {state.humidity} </span><br/>
           <span>Давление: {state.pressure} </span><br/>
           <span>Температура: {state.temp} </span><br/>
+        </div>
+        <div>
+          <input type='text' id='addCity' />
+          <input type='submit' onClick={this.inputHanler} />
         </div>
       </div>
     );

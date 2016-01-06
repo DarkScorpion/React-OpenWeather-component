@@ -58,7 +58,13 @@ var ReactWeather = React.createClass({
     });
   },
 
-  inputHanler: function(event) {
+  _removeAllCities: function(event) {
+    this.setState({
+      citiesArr: []
+    });
+  },
+
+  addCityHanler: function(event) {
     var str = document.getElementById("addCity").value;
     console.log('inputHandler activate: ' + str);
     this._addCity(str);
@@ -67,7 +73,9 @@ var ReactWeather = React.createClass({
   render: function () {
     var state = this.state;
     var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png'
+
     console.log(state);
+    
     return (
       <div>
         <div><img src={iconLink} /></div>
@@ -78,11 +86,13 @@ var ReactWeather = React.createClass({
         </div>
         <div>
           <input type='text' id='addCity' />
-          <input type='submit' onClick={this.inputHanler} />
+          <input type='submit' value='Добавить' onClick={this.addCityHanler} />
+          <input type='submit' value='Удалить всё' onClick={this._removeAllCities} />
         </div>
       </div>
     );
   }
+
 });
 
 ReactDOM.render(

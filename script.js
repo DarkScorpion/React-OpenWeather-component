@@ -62,7 +62,16 @@ var ReactWeather = React.createClass({
     });
   },
 
-  _removeAllCitiesHandler: function(event) {
+  _getCitiesLine: function() {
+    var state = this.state;
+    var citiesList = [];
+    for(var city in state.citiesArr) {
+      citiesList.push(<span>{state.citiesArr[city]},&nbsp;</span>);
+    }
+    return citiesList;
+  },
+
+  removeAllCitiesHandler: function(event) {
     this.setState({
       citiesArr: []
     });
@@ -78,10 +87,7 @@ var ReactWeather = React.createClass({
     var state = this.state;
     var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png'
     
-    var citiesList = [];
-    for(var city in state.citiesArr) {
-      citiesList.push(<span>{state.citiesArr[city]},&nbsp;</span>);
-    }
+    var citiesLine = this._getCitiesLine();
 
     console.log(state);
     
@@ -96,9 +102,9 @@ var ReactWeather = React.createClass({
         <div>
           <input type='text' id='addCity' />
           <input type='submit' value='Добавить' onClick={this.addCityHanler} />
-          <input type='submit' value='Удалить всё' onClick={this._removeAllCitiesHandler} />
+          <input type='submit' value='Удалить всё' onClick={this.removeAllCitiesHandler} />
         </div>
-        <div>{citiesList}</div>
+        <div>{citiesLine}</div>
       </div>
     );
   }

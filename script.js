@@ -63,12 +63,9 @@ var ReactWeather = React.createClass({
   },
 
   _getCitiesLine: function() {
-    var state = this.state;
-    var citiesList = [];
-    for(var city in state.citiesArr) {
-      citiesList.push(<span>{state.citiesArr[city]},&nbsp;</span>);
-    }
-    return citiesList;
+    return this.state.citiesArr.map(function(city) {
+      return <span>{city},&nbsp;</span>
+    });
   },
 
   removeAllCitiesHandler: function(event) {

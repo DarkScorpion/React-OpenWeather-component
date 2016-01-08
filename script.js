@@ -63,8 +63,8 @@ var ReactWeather = React.createClass({
   },
 
   _getCitiesLine: function() {
-    return this.state.citiesArr.map(function(city) {
-      return <span>{city},&nbsp;</span>
+    return this.state.citiesArr.map(function(value, key) {
+      return <span key={key}>{value},&nbsp;</span>
     });
   },
 

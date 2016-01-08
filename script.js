@@ -77,13 +77,14 @@ var ReactWeather = React.createClass({
   },
 
   addCityHanler: function(event) {
-    var str = document.getElementById("addCity").value;
-    console.log('inputHandler activate: ' + str);
-    this._addCity(str);
+    var input = document.getElementById("addCity").value;
+    console.log('addCityHanler: ' + input);
+    this._addCity(input);
   },
   
   cityClickHandler: function(event) {
     var city = event.target.innerHTML;
+    console.log('cityClickHandler: ' + city);
     this._updateWeatherState(city);
   },
 

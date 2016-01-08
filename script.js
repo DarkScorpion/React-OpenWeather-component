@@ -8,9 +8,9 @@ var ReactWeather = React.createClass({
   },
 
   componentDidMount: function() {
-    this._getCitysFromStorage();
-
     var self = this;
+    self._getCitysFromStorage();
+
     self._getCityWeather('London', function(result) {
       if ( self.isMounted() ) {
         self.setState({

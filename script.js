@@ -8,19 +8,8 @@ var ReactWeather = React.createClass({
   },
 
   componentDidMount: function() {
-    var self = this;
-    self._getCitysFromStorage();
-
-    self._getCityWeather('London', function(result) {
-      if ( self.isMounted() ) {
-        self.setState({
-          temp: result.main.temp,
-          icon: result.weather[0].icon,
-          pressure: result.main.pressure,
-          humidity: result.main.humidity
-        });
-      }
-    });
+    this._getCitysFromStorage();
+    this._updateWeatherState('London');
   },
 
   componentDidUpdate: function() {
@@ -42,11 +31,22 @@ var ReactWeather = React.createClass({
     localStorage['citiesArr'] = JSON.stringify(this.state.citiesArr);
   },
 
-  _getCityWeather: function(city, cb) {
+  _updateWeatherState: function(city) {
+
+    var self = this;
     var appid = '2de143494c0b295cca9337e1e96b00e0';
     var url = 'http://api.openweathermap.org/data/2.5/weather';
     
-    $.get(url, {q: city, appid: appid}, cb);
+    $.get(url, {q: city, appid: appid}, function(result) {
+      if ( self.isMounted() ) {
+        self.setState({
+          temp: result.main.temp,
+          icon: result.weather[0].icon,
+          pressure: result.main.pressure,
+          humidity: result.main.humidity
+        });
+      }
+    });
   },
 
   _addCity: function(city) {

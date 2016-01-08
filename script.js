@@ -29,7 +29,6 @@ var ReactWeather = React.createClass({
 
   _getCitysFromStorage: function() {
     //localStorage.removeItem('citiesArr');
-    console.log(localStorage['citiesArr']);
     if(typeof localStorage['citiesArr'] === 'undefined') {
       localStorage['citiesArr'] = '[]';
     }
@@ -63,8 +62,9 @@ var ReactWeather = React.createClass({
   },
 
   _getCitiesLine: function() {
+    var self = this;
     return this.state.citiesArr.map(function(value, key) {
-      return <span key={key}>{value},&nbsp;</span>
+      return <span key={key} onClick={self.cityClickHandler}>{value}&nbsp;</span>
     });
   },
 
@@ -80,6 +80,11 @@ var ReactWeather = React.createClass({
     this._addCity(str);
   },
   
+  cityClickHandler: function(event) {
+    var city = event.target.innerHTML;
+    console.log(city);
+  },
+
   render: function () {
     var state = this.state;
     var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png'

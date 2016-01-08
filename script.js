@@ -82,7 +82,7 @@ var ReactWeather = React.createClass({
   
   cityClickHandler: function(event) {
     var city = event.target.innerHTML;
-    console.log(city);
+    this._updateWeatherState(city);
   },
 
   render: function () {

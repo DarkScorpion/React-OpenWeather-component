@@ -3,6 +3,7 @@ var ReactWeather = React.createClass({
   getInitialState: function() {
     return {
       citiesArr: [],
+      currentCity: '',
       userLocation: 'London'
     };
   },
@@ -40,6 +41,7 @@ var ReactWeather = React.createClass({
     $.get(url, {q: city, appid: appid}, function(result) {
       if ( self.isMounted() ) {
         self.setState({
+          currentCity: city,
           temp: result.main.temp,
           icon: result.weather[0].icon,
           pressure: result.main.pressure,
@@ -95,6 +97,7 @@ var ReactWeather = React.createClass({
     
     return (
       <div>
+        <h4>{state.currentCity}</h4>
         <div><img src={iconLink} /></div>
         <div>
           <span>Влажность: {state.humidity} </span><br/>

@@ -10,6 +10,7 @@ var ReactWeather = React.createClass({
 
   componentDidMount: function() {
     this._getCitysFromStorage();
+    this._getGeoOfUser();
     this._updateWeatherState('London');
   },
 
@@ -30,6 +31,26 @@ var ReactWeather = React.createClass({
 
   _setCitysToStorage: function() {
     localStorage['citiesArr'] = JSON.stringify(this.state.citiesArr);
+  },
+
+  _getGeoOfUser: function() {
+    if (!navigator.geolocation) {
+      this.state.currentCity = 'Can\'t get geo!';
+      return;
+    }
+
+    function success(position) {
+      var lat  = position.coords.latitude;
+      var lon = position.coords.longitude;
+      console.log('Geo success: %s %s', lat, lon);
+
+    };
+
+    function error() {
+      console.log('Geo FAIL!');
+    };
+
+    navigator.geolocation.getCurrentPosition(success, error);
   },
 
   _updateWeatherState: function(city) {

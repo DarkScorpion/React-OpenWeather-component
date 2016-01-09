@@ -66,7 +66,8 @@ var ReactWeather = React.createClass({
   _getCitiesLine: function() {
     var self = this;
     return self.state.citiesArr.map(function(value, key) {
-      return ( <span className='cityName' key={key} onClick={self.cityClickHandler}>{value}</span> )
+      var className = (value === self.state.currentCity) ? 'selectCity' : 'cityNames';
+      return ( <span className={className} key={key} onClick={self.cityClickHandler}>{value}</span> )
     });
   },
 

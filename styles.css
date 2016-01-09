@@ -4,13 +4,21 @@ div {
 }
 
 input {
-  border-radius: 5px;
   margin: 5px;
+  border-radius: 5px;
 }
 
-.cityName {
-  padding: 2px;
+.cityNames {
   margin: 5px;
+  padding: 2px;
   border: 1px solid;
   border-radius: 5px;
+}
+
+.selectCity {
+  margin: 5px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #00FF33;
 }

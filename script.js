@@ -105,7 +105,7 @@ var ReactWeather = React.createClass({
           <span>Температура: {state.temp} </span><br/>
         </div>
         <div>
-          <input type='text' id='addCity' />
+          <input type='text' id='addCity' /> <br/>
           <input type='submit' value='Добавить' onClick={this.addCityHanler} />
           <input type='submit' value='Удалить всё' onClick={this.removeAllCitiesHandler} />
         </div>

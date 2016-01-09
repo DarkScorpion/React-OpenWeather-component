@@ -3,15 +3,14 @@ var ReactWeather = React.createClass({
   getInitialState: function() {
     return {
       citiesArr: [],
-      currentCity: '',
-      userLocation: 'London'
+      currentCity: ''
     };
   },
 
   componentDidMount: function() {
-    this._getCitysFromStorage();
     this._getGeoOfUser();
-    this._updateWeatherState('London');
+    this._getCitysFromStorage();
+    //this._updateWeatherState('London');
   },
 
   componentDidUpdate: function() {
@@ -34,16 +33,21 @@ var ReactWeather = React.createClass({
   },
 
   _getGeoOfUser: function() {
+    var self = this;
+
     if (!navigator.geolocation) {
       this.state.currentCity = 'Can\'t get geo!';
       return;
     }
 
     function success(position) {
-      var lat  = position.coords.latitude;
-      var lon = position.coords.longitude;
-      console.log('Geo success: %s %s', lat, lon);
+      var pos = {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude
+      };
+      console.log('Geo success: %o', pos);
 
+      self._updateWeatherState(pos);
     };
 
     function error() {
@@ -53,16 +57,23 @@ var ReactWeather = React.createClass({
     navigator.geolocation.getCurrentPosition(success, error);
   },
 
-  _updateWeatherState: function(city) {
+  _updateWeatherState: function(arg) {
 
     var self = this;
-    var appid = '2de143494c0b295cca9337e1e96b00e0';
+    var appID = '2de143494c0b295cca9337e1e96b00e0';
     var url = 'http://api.openweathermap.org/data/2.5/weather';
-    
-    $.get(url, {q: city, appid: appid}, function(data) {
+
+    var query = (typeof arg === 'object') ? 
+      {lat: arg.lat, lon: arg.lon} : {q: arg};
+
+    query.appid = appID;
+
+    console.log(query);
+
+    $.get(url, query, function(data) {
       if ( self.isMounted() ) {
         self.setState({
-          currentCity: city,
+          currentCity: 'test', //arg,
           temp: data.main.temp,
           icon: data.weather[0].icon,
           pressure: data.main.pressure,

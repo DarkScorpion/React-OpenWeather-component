@@ -38,14 +38,14 @@ var ReactWeather = React.createClass({
     var appid = '2de143494c0b295cca9337e1e96b00e0';
     var url = 'http://api.openweathermap.org/data/2.5/weather';
     
-    $.get(url, {q: city, appid: appid}, function(result) {
+    $.get(url, {q: city, appid: appid}, function(data) {
       if ( self.isMounted() ) {
         self.setState({
           currentCity: city,
-          temp: result.main.temp,
-          icon: result.weather[0].icon,
-          pressure: result.main.pressure,
-          humidity: result.main.humidity
+          temp: data.main.temp,
+          icon: data.weather[0].icon,
+          pressure: data.main.pressure,
+          humidity: data.main.humidity
         });
       }
     });
@@ -65,7 +65,7 @@ var ReactWeather = React.createClass({
 
   _getCitiesLine: function() {
     var self = this;
-    return this.state.citiesArr.map(function(value, key) {
+    return self.state.citiesArr.map(function(value, key) {
       return <span key={key} onClick={self.cityClickHandler}>{value}&nbsp;</span>
     });
   },
@@ -90,9 +90,8 @@ var ReactWeather = React.createClass({
 
   render: function () {
     var state = this.state;
-    var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png'
-    
     var citiesLine = this._getCitiesLine();
+    var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
 
     console.log(state);
     

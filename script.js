@@ -10,7 +10,6 @@ var ReactWeather = React.createClass({
   componentDidMount: function() {
     this._getGeoOfUser();
     this._getCitysFromStorage();
-    //this._updateWeatherState('London');
   },
 
   componentDidUpdate: function() {
@@ -68,7 +67,7 @@ var ReactWeather = React.createClass({
     if (typeof arg === 'object') {
       query.lat = arg.lat;
       query.lon = arg.lon;
-      city = 'You Geolocation Weather!';
+      city = 'Weather in the place where you are!';
     } else {
       query.q = arg;
       city = arg;

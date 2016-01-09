@@ -63,9 +63,16 @@ var ReactWeather = React.createClass({
     var appID = '2de143494c0b295cca9337e1e96b00e0';
     var url = 'http://api.openweathermap.org/data/2.5/weather';
 
-    var query = (typeof arg === 'object') ? 
-      {lat: arg.lat, lon: arg.lon} : {q: arg};
-
+    var city = '';
+    var query = {};
+    if (typeof arg === 'object') {
+      query.lat = arg.lat;
+      query.lon = arg.lon;
+      city = 'You Geolocation Weather!';
+    } else {
+      query.q = arg;
+      city = arg;
+    }
     query.appid = appID;
 
     console.log(query);
@@ -73,7 +80,7 @@ var ReactWeather = React.createClass({
     $.get(url, query, function(data) {
       if ( self.isMounted() ) {
         self.setState({
-          currentCity: 'test', //arg,
+          currentCity: city,
           temp: data.main.temp,
           icon: data.weather[0].icon,
           pressure: data.main.pressure,

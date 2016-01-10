@@ -48,8 +48,8 @@ var ReactWeather = React.createClass({
       self._updateWeatherState(pos);
     };
 
-    function error() {
-      console.log('Geo FAIL!');
+    function error(err) {
+      console.log('Geo FAIL: %o', err);
     };
 
     navigator.geolocation.getCurrentPosition(success, error);

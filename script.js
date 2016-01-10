@@ -1,9 +1,14 @@
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
 var ReactWeather = React.createClass({
   getInitialState: function() {
+    var notSet = '??';
     return {
       citiesArr: [],
-      currentCity: ''
+      currentCity: '',
+      temp: notSet,
+      icon: notSet,
+      pressure: notSet,
+      humidity: notSet
     };
   },
 
@@ -50,6 +55,9 @@ var ReactWeather = React.createClass({
 
     function error(err) {
       console.log('Geo FAIL: %o', err);
+      self.setState({
+        currentCity: 'Error getting location data'
+      });
     };
 
     navigator.geolocation.getCurrentPosition(success, error);

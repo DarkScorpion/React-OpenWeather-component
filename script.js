@@ -44,7 +44,6 @@ var ReactWeather = React.createClass({
         lat: position.coords.latitude,
         lon: position.coords.longitude
       };
-      console.log('Geo success: %o', pos);
 
       self._updateWeatherState(pos);
     };
@@ -63,7 +62,7 @@ var ReactWeather = React.createClass({
     var url = 'http://api.openweathermap.org/data/2.5/weather';
 
     var city = '';
-    var query = {};
+    var query = { appid: appID };
     if (typeof arg === 'object') {
       query.lat = arg.lat;
       query.lon = arg.lon;
@@ -72,9 +71,8 @@ var ReactWeather = React.createClass({
       query.q = arg;
       city = arg;
     }
-    query.appid = appID;
 
-    console.log(query);
+    console.log('Query: ', query);
 
     $.get(url, query, function(data) {
       if ( self.isMounted() ) {
@@ -132,7 +130,7 @@ var ReactWeather = React.createClass({
     var citiesLine = this._getCitiesLine();
     var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
 
-    console.log(state);
+    console.log('Render state: %o', state);
     
     return (
       <div>
@@ -145,8 +143,8 @@ var ReactWeather = React.createClass({
         </div>
         <div>
           <input type='text' id='addCity' /> <br/>
-          <input type='submit' value='Добавить' onClick={this.addCityHanler} />
-          <input type='submit' value='Удалить всё' onClick={this.removeAllCitiesHandler} />
+          <input type='submit' value='Add' onClick={this.addCityHanler} />
+          <input type='submit' value='Remove All' onClick={this.removeAllCitiesHandler} />
         </div>
         <div>{citiesLine}</div>
       </div>

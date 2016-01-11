@@ -81,7 +81,7 @@ var ReactWeather = React.createClass({
       city = arg;
     }
 
-    console.log('Query: ', query);
+    console.log('Query: %o', query);
 
     $.get(url, query, function(data) {
       if ( self.isMounted() ) {
@@ -124,13 +124,13 @@ var ReactWeather = React.createClass({
 
   addCityHanler: function(event) {
     var input = document.getElementById("addCity").value;
-    console.log('addCityHanler: ' + input);
+    console.log('addCityHanler: %s', input);
     this._addCity(input);
   },
   
   cityClickHandler: function(event) {
     var city = event.target.innerHTML;
-    console.log('cityClickHandler: ' + city);
+    console.log('cityClickHandler: %s', city);
     this._updateWeatherState(city);
   },
 

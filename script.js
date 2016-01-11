@@ -66,7 +66,6 @@ var ReactWeather = React.createClass({
 
   _updateWeatherState: function(arg) {
 
-    var self = this;
     var appID = '2de143494c0b295cca9337e1e96b00e0';
     var url = 'http://api.openweathermap.org/data/2.5/weather';
 
@@ -83,9 +82,9 @@ var ReactWeather = React.createClass({
 
     console.log('Query: ', query);
 
-    $.get(url, query, function(data) {
-      if ( self.isMounted() ) {
-        self.setState({
+    $.get(url, query, (data) => {
+      if ( this.isMounted() ) {
+        this.setState({
           currentCity: city,
           temp: data.main.temp,
           icon: data.weather[0].icon,
@@ -109,10 +108,9 @@ var ReactWeather = React.createClass({
   },
 
   _getCitiesLine: function() {
-    var self = this;
-    return self.state.citiesArr.map(function(value, key) {
-      var className = (value === self.state.currentCity) ? 'selectCity' : 'cityNames';
-      return ( <span className={className} key={key} onClick={self.cityClickHandler}>{value}</span> )
+    return this.state.citiesArr.map((value, key) => {
+      var className = (value === this.state.currentCity) ? 'selectCity' : 'cityNames';
+      return ( <span className={className} key={key} onClick={this.cityClickHandler}>{value}</span> )
     });
   },
 

@@ -7,7 +7,7 @@ var ReactWeather = React.createClass({
       citiesArr: [],
       currentCity: '',
       temp: notSet,
-      icon: 'notSet',
+      icon: notSet,
       pressure: notSet,
       humidity: notSet
     };

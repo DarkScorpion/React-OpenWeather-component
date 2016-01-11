@@ -43,25 +43,24 @@ class ReactWeather extends React.Component {
   }
 
   _getGeoOfUser() {
-    var self = this;
 
     if (!navigator.geolocation) {
       this.state.currentCity = 'Can\'t get geo!';
       return;
     }
 
-    function success(position) {
+    var success = (position) => {
       var pos = {
         lat: position.coords.latitude,
         lon: position.coords.longitude
       };
 
-      self._updateWeatherState(pos);
+      this._updateWeatherState(pos);
     };
 
-    function error(err) {
+    var error = (err) => {
       console.log('Geo FAIL: %o', err);
-      self.setState({
+      this.setState({
         currentCity: 'Error getting location data'
       });
     };

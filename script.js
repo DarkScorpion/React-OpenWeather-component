@@ -1,3 +1,4 @@
+'use strict';
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
 var ReactWeather = React.createClass({
   getInitialState: function() {

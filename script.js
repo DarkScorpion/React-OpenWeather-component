@@ -146,9 +146,9 @@ class ReactWeather extends React.Component {
         <h4>{state.currentCity}</h4>
         <div><img src={iconLink} /></div>
         <div>
-          <span>Влажность: {state.humidity} </span><br/>
-          <span>Давление: {state.pressure} </span><br/>
-          <span>Температура: {state.temp} </span><br/>
+          <span>Humidity: {state.humidity} </span><br/>
+          <span>Pressure: {state.pressure} </span><br/>
+          <span>Temperature: {state.temp} </span><br/>
         </div>
         <div>
           <input type='text' id='addCity' /> <br/>

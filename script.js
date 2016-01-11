@@ -1,9 +1,10 @@
 'use strict';
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
-var ReactWeather = React.createClass({
-  getInitialState: function() {
+class ReactWeather extends React.Component {
+  constructor(props) {
+    super(props);
     var notSet = '??';
-    return {
+    this.state = {
       citiesArr: [],
       currentCity: '',
       temp: notSet,
@@ -11,18 +12,22 @@ var ReactWeather = React.createClass({
       pressure: notSet,
       humidity: notSet
     };
-  },
 
-  componentDidMount: function() {
+    this.addCityHanler = this.addCityHanler.bind(this);
+    this.removeAllCitiesHandler = this.removeAllCitiesHandler.bind(this);
+    this.cityClickHandler = this.cityClickHandler.bind(this);
+  }
+
+  componentDidMount() {
     this._getGeoOfUser();
     this._getCitysFromStorage();
-  },
+  }
 
-  componentDidUpdate: function() {
+  componentDidUpdate() {
     this._setCitysToStorage();
-  },
+  }
 
-  _getCitysFromStorage: function() {
+  _getCitysFromStorage() {
     //localStorage.removeItem('citiesArr');
     if(typeof localStorage['citiesArr'] === 'undefined') {
       localStorage['citiesArr'] = '[]';
@@ -31,13 +36,13 @@ var ReactWeather = React.createClass({
     this.setState({
       citiesArr: JSON.parse(localStorage['citiesArr'])
     });
-  },
+  }
 
-  _setCitysToStorage: function() {
+  _setCitysToStorage() {
     localStorage['citiesArr'] = JSON.stringify(this.state.citiesArr);
-  },
+  }
 
-  _getGeoOfUser: function() {
+  _getGeoOfUser() {
     var self = this;
 
     if (!navigator.geolocation) {
@@ -62,10 +67,9 @@ var ReactWeather = React.createClass({
     };
 
     navigator.geolocation.getCurrentPosition(success, error);
-  },
+  }
 
-  _updateWeatherState: function(arg) {
-
+  _updateWeatherState(arg) {
     var appID = '2de143494c0b295cca9337e1e96b00e0';
     var url = 'http://api.openweathermap.org/data/2.5/weather';
 
@@ -83,56 +87,54 @@ var ReactWeather = React.createClass({
     console.log('Query: ', query);
 
     $.get(url, query, (data) => {
-      if ( this.isMounted() ) {
-        this.setState({
-          currentCity: city,
-          temp: data.main.temp,
-          icon: data.weather[0].icon,
-          pressure: data.main.pressure,
-          humidity: data.main.humidity
-        });
-      }
+      this.setState({
+        currentCity: city,
+        temp: data.main.temp,
+        icon: data.weather[0].icon,
+        pressure: data.main.pressure,
+        humidity: data.main.humidity
+      });
     });
-  },
+  }
 
-  _addCity: function(city) {
+  _addCity(city) {
     if(city === '') {
       return
     }
 
-    this.setState(function(state) {
+    this.setState((state) => {
       var temp = state.citiesArr;
       temp.push(city);
       state.citiesArr = temp;
     });
-  },
+  }
 
-  _getCitiesLine: function() {
+  _getCitiesLine() {
     return this.state.citiesArr.map((value, key) => {
       var className = (value === this.state.currentCity) ? 'selectCity' : 'cityNames';
       return ( <span className={className} key={key} onClick={this.cityClickHandler}>{value}</span> )
     });
-  },
+  }
 
-  removeAllCitiesHandler: function(event) {
+  removeAllCitiesHandler(event) {
     this.setState({
       citiesArr: []
     });
-  },
+  }
 
-  addCityHanler: function(event) {
+  addCityHanler(event) {
     var input = document.getElementById("addCity").value;
     console.log('addCityHanler: ' + input);
     this._addCity(input);
-  },
+  }
   
-  cityClickHandler: function(event) {
+  cityClickHandler(event) {
     var city = event.target.innerHTML;
     console.log('cityClickHandler: ' + city);
     this._updateWeatherState(city);
-  },
+  }
 
-  render: function () {
+  render() {
     var state = this.state;
     var citiesLine = this._getCitiesLine();
     var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
@@ -158,7 +160,7 @@ var ReactWeather = React.createClass({
     );
   }
 
-});
+};
 
 ReactDOM.render(
   <ReactWeather />,

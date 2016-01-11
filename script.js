@@ -7,7 +7,7 @@ var ReactWeather = React.createClass({
       citiesArr: [],
       currentCity: '',
       temp: notSet,
-      icon: notSet,
+      icon: 'notSet',
       pressure: notSet,
       humidity: notSet
     };
@@ -67,7 +67,7 @@ var ReactWeather = React.createClass({
   _updateWeatherState: function(arg) {
 
     var self = this;
-    var appID = '2de143494c0b295cca9337e1e96b00e0';
+    var appID = this.props.appID;
     var url = 'http://api.openweathermap.org/data/2.5/weather';
 
     var city = '';
@@ -163,6 +163,6 @@ var ReactWeather = React.createClass({
 });
 
 ReactDOM.render(
-  <ReactWeather />,
+  <ReactWeather appID='2de143494c0b295cca9337e1e96b00e0' />,
   document.getElementById('ReactWeather')
 );

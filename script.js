@@ -8,7 +8,7 @@ class ReactWeather extends React.Component {
       citiesArr: [],
       currentCity: '',
       temp: notSet,
-      icon: notSet,
+      icon: 'notSet',
       pressure: notSet,
       humidity: notSet
     };
@@ -68,8 +68,9 @@ class ReactWeather extends React.Component {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 
+
   _updateWeatherState(arg) {
-    var appID = '2de143494c0b295cca9337e1e96b00e0';
+    var appID = this.props.appID;
     var url = 'http://api.openweathermap.org/data/2.5/weather';
 
     var city = '';
@@ -162,6 +163,6 @@ class ReactWeather extends React.Component {
 };
 
 ReactDOM.render(
-  <ReactWeather />,
+  <ReactWeather appID='2de143494c0b295cca9337e1e96b00e0' />,
   document.getElementById('ReactWeather')
 );

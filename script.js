@@ -8,7 +8,7 @@ class ReactWeather extends React.Component {
       citiesArr: [],
       currentCity: '',
       temp: notSet,
-      icon: 'notSet',
+      icon: notSet,
       pressure: notSet,
       humidity: notSet
     };

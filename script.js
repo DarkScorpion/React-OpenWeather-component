@@ -84,7 +84,7 @@ class ReactWeather extends React.Component {
       city = arg;
     }
 
-    console.log('Query: ', query);
+    console.log('Query: %o', query);
 
     $.get(url, query, (data) => {
       this.setState({
@@ -124,13 +124,13 @@ class ReactWeather extends React.Component {
 
   addCityHanler(event) {
     var input = document.getElementById("addCity").value;
-    console.log('addCityHanler: ' + input);
+    console.log('addCityHanler: %s', input);
     this._addCity(input);
   }
   
   cityClickHandler(event) {
     var city = event.target.innerHTML;
-    console.log('cityClickHandler: ' + city);
+    console.log('cityClickHandler: %s', city);
     this._updateWeatherState(city);
   }
 

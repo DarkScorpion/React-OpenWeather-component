@@ -29,22 +29,24 @@ class ReactWeather extends React.Component {
 
   _getCitysFromStorage() {
     //localStorage.removeItem('citiesArr');
-    if(typeof localStorage['citiesArr'] === 'undefined') {
-      localStorage['citiesArr'] = '[]';
+    if(typeof localStorage.citiesArr === 'undefined') {
+      localStorage.citiesArr = '[]';
     }
 
     this.setState({
-      citiesArr: JSON.parse(localStorage['citiesArr'])
+      citiesArr: JSON.parse(localStorage.citiesArr)
     });
   }
 
+
   _setCitysToStorage() {
-    localStorage['citiesArr'] = JSON.stringify(this.state.citiesArr);
+    localStorage.citiesArr = JSON.stringify(this.state.citiesArr);
   }
 
   _getGeoOfUser() {
 
-    if (!navigator.geolocation) {
+    var geo = navigator.geolocation;
+    if (!geo) {
       this.state.currentCity = 'Can\'t get geo!';
       return;
     }
@@ -65,7 +67,7 @@ class ReactWeather extends React.Component {
       });
     };
 
-    navigator.geolocation.getCurrentPosition(success, error);
+    geo.getCurrentPosition(success, error);
   }
 
 

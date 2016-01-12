@@ -39,8 +39,9 @@ var ReactWeather = React.createClass({
 
   _getGeoOfUser: function() {
     var self = this;
+    var geo = navigator.geolocation;
 
-    if (!navigator.geolocation) {
+    if (!geo) {
       this.state.currentCity = 'Can\'t get geo!';
       return;
     }
@@ -61,7 +62,7 @@ var ReactWeather = React.createClass({
       });
     };
 
-    navigator.geolocation.getCurrentPosition(success, error);
+    geo.getCurrentPosition(success, error);
   },
 
   _updateWeatherState: function(arg) {

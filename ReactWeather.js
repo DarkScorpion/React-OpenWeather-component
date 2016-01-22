@@ -97,18 +97,6 @@ var ReactWeather = React.createClass({
     });
   },
 
-  _addCity: function(city) {
-    if(city === '') {
-      return
-    }
-
-    this.setState(function(state) {
-      var temp = state.citiesArr;
-      temp.push(city);
-      state.citiesArr = temp;
-    });
-  },
-
   _getCitiesLine: function() {
     var self = this;
     return self.state.citiesArr.map(function(value, key) {
@@ -125,8 +113,16 @@ var ReactWeather = React.createClass({
 
   addCityHanler: function(event) {
     var input = document.getElementById("addCity").value;
+
     console.log('addCityHanler: %s', input);
-    this._addCity(input);
+
+    if(input !== '') {
+      this.setState(function(state) {
+        var temp = state.citiesArr;
+        temp.push(input);
+        state.citiesArr = temp;
+      });
+    }
   },
   
   cityClickHandler: function(event) {

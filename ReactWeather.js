@@ -66,7 +66,6 @@ var ReactWeather = React.createClass({
   },
 
   _updateWeatherState: function(arg) {
-
     var self = this;
     var appID = this.props.appID;
     var url = 'http://api.openweathermap.org/data/2.5/weather';
@@ -117,10 +116,19 @@ var ReactWeather = React.createClass({
     }
   },
 
-  removeAllCitiesHandler: function(event) {
-    this.setState({
-      citiesArr: []
-    });
+  removeCityHandler: function(event) {
+    var citiesArr = this.state.citiesArr;
+    var cityName = this.state.currentCity;
+
+    var elemNum = citiesArr.indexOf(cityName);
+
+    if(elemNum !== -1) {
+      citiesArr.splice(elemNum, 1);
+      this.setState({
+        citiesArr: citiesArr
+      });
+      console.log('Remove city: %s', cityName);
+    }
   },
 
   addCityHanler: function(event) {
@@ -145,8 +153,8 @@ var ReactWeather = React.createClass({
 
   render: function () {
     var state = this.state;
-    var citiesLine = this._getCitiesLine();
     var icon = this._getIcon();
+    var citiesLine = this._getCitiesLine();
 
     console.log('Render state: %o', state);
     
@@ -162,7 +170,7 @@ var ReactWeather = React.createClass({
         <div>
           <input type='text' id='addCity' /> <br/>
           <input type='submit' value='Add' onClick={this.addCityHanler} />
-          <input type='submit' value='Remove All' onClick={this.removeAllCitiesHandler} />
+          <input type='submit' value='Remove' onClick={this.removeCityHandler} />
         </div>
         <div>{citiesLine}</div>
       </div>

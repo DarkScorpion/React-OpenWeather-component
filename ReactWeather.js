@@ -105,6 +105,18 @@ var ReactWeather = React.createClass({
     });
   },
 
+  _getIcon: function() {
+    var notSet = '??';
+    var state= this.state;
+
+    if(state.currentCity !== notSet) {
+      var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
+      return <img src={iconLink} />
+    } else {
+      return false;
+    }
+  },
+
   removeAllCitiesHandler: function(event) {
     this.setState({
       citiesArr: []
@@ -134,14 +146,14 @@ var ReactWeather = React.createClass({
   render: function () {
     var state = this.state;
     var citiesLine = this._getCitiesLine();
-    var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
+    var icon = this._getIcon();
 
     console.log('Render state: %o', state);
     
     return (
       <div>
         <h4>{state.currentCity}</h4>
-        <div><img src={iconLink} /></div>
+        <div>{icon}</div>
         <div>
           <span>Humidity: {state.humidity} </span><br/>
           <span>Pressure: {state.pressure} </span><br/>

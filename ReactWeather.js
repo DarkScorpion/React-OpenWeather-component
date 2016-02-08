@@ -5,7 +5,7 @@ var ReactWeather = React.createClass({
     var notSet = '??';
     return {
       citiesArr: [],
-      currentCity: '',
+      currentCity: notSet,
       temp: notSet,
       icon: notSet,
       pressure: notSet,
@@ -42,7 +42,7 @@ var ReactWeather = React.createClass({
     var geo = navigator.geolocation;
 
     if (!geo) {
-      this.state.currentCity = 'Can\'t get geo!';
+      self.state.currentCity = 'Can\'t get geo!';
       return;
     }
 

@@ -6,7 +6,7 @@ class ReactWeather extends React.Component {
     var notSet = '??';
     this.state = {
       citiesArr: [],
-      currentCity: '',
+      currentCity: notSet,
       temp: notSet,
       icon: notSet,
       pressure: notSet,
@@ -14,7 +14,7 @@ class ReactWeather extends React.Component {
     };
 
     this.addCityHanler = this.addCityHanler.bind(this);
-    this.removeAllCitiesHandler = this.removeAllCitiesHandler.bind(this);
+    this.removeCityHandler = this.removeCityHandler.bind(this);
     this.cityClickHandler = this.cityClickHandler.bind(this);
   }
 
@@ -47,7 +47,7 @@ class ReactWeather extends React.Component {
 
     var geo = navigator.geolocation;
     if (!geo) {
-      this.state.currentCity = 'Can\'t get geo!';
+      self.state.currentCity = 'Can\'t get geo!';
       return;
     }
 
@@ -69,7 +69,6 @@ class ReactWeather extends React.Component {
 
     geo.getCurrentPosition(success, error);
   }
-
 
   _updateWeatherState(arg) {
     var appID = this.props.appID;
@@ -118,18 +117,47 @@ class ReactWeather extends React.Component {
     });
   }
 
-  removeAllCitiesHandler(event) {
-    this.setState({
-      citiesArr: []
-    });
+  _getIcon() {
+    var notSet = '??';
+    var state= this.state;
+
+    if(state.currentCity !== notSet) {
+      var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
+      return <img src={iconLink} />
+    } else {
+      return false;
+    }
+  }
+
+  removeCityHandler(event) {
+    var citiesArr = this.state.citiesArr;
+    var cityName = this.state.currentCity;
+
+    var elemNum = citiesArr.indexOf(cityName);
+
+    if(elemNum !== -1) {
+      citiesArr.splice(elemNum, 1);
+      this.setState({
+        citiesArr: citiesArr
+      });
+      console.log('Remove city: %s', cityName);
+    }
   }
 
   addCityHanler(event) {
     var input = document.getElementById("addCity").value;
+
     console.log('addCityHanler: %s', input);
-    this._addCity(input);
+
+    if(input !== '') {
+      this.setState(function(state) {
+        var temp = state.citiesArr;
+        temp.push(input);
+        state.citiesArr = temp;
+      });
+    }
   }
-  
+
   cityClickHandler(event) {
     var city = event.target.innerHTML;
     console.log('cityClickHandler: %s', city);
@@ -138,15 +166,15 @@ class ReactWeather extends React.Component {
 
   render() {
     var state = this.state;
+    var icon = this._getIcon();
     var citiesLine = this._getCitiesLine();
-    var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
 
     console.log('Render state: %o', state);
     
     return (
       <div>
         <h4>{state.currentCity}</h4>
-        <div><img src={iconLink} /></div>
+        <div>{icon}</div>
         <div>
           <span>Humidity: {state.humidity} </span><br/>
           <span>Pressure: {state.pressure} </span><br/>
@@ -155,7 +183,7 @@ class ReactWeather extends React.Component {
         <div>
           <input type='text' id='addCity' /> <br/>
           <input type='submit' value='Add' onClick={this.addCityHanler} />
-          <input type='submit' value='Remove All' onClick={this.removeAllCitiesHandler} />
+          <input type='submit' value='Remove' onClick={this.removeCityHandler} />
         </div>
         <div>{citiesLine}</div>
       </div>
@@ -165,6 +193,6 @@ class ReactWeather extends React.Component {
 };
 
 ReactDOM.render(
-  <ReactWeather appID='2de143494c0b295cca9337e1e96b00e0' />,
+  <ReactWeather appID='44db6a862fba0b067b1930da0d769e98' />,
   document.getElementById('ReactWeather')
 );

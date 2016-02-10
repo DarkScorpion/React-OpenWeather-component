@@ -4,5 +4,3 @@ Prototype of React component that implements the basic functions of weather disp
 Tested on Firefox 41.
 
 To test on Chrome, use a key --disable-web-security for allow cross requests.
-
-License: GNU GENERAL PUBLIC LICENSE Version 2

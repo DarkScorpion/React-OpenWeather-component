@@ -98,18 +98,6 @@ class ReactWeather extends React.Component {
     });
   }
 
-  _addCity(city) {
-    if(city === '') {
-      return
-    }
-
-    this.setState((state) => {
-      var temp = state.citiesArr;
-      temp.push(city);
-      state.citiesArr = temp;
-    });
-  }
-
   _getCitiesLine() {
     return this.state.citiesArr.map((value, key) => {
       var className = (value === this.state.currentCity) ? 'selectCity' : 'cityNames';

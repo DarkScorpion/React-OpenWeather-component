@@ -47,7 +47,7 @@ class ReactWeather extends React.Component {
 
     var geo = navigator.geolocation;
     if (!geo) {
-      self.state.currentCity = 'Can\'t get geo!';
+      this.state.currentCity = 'Can\'t get geo!';
       return;
     }
 

@@ -1,0 +1,37 @@
+{
+  "name": "react-openweather",
+  "version": "0.0.1",
+  "description": "Prototype of React component that implements the basic functions of weather display on the user's location and the selected cities.",
+  "main": "ReactWeather.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack -d --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarkScorpion/React-OpenWeather-component.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "webpack"
+  ],
+  "author": "Alex Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarkScorpion/React-OpenWeather-component/issues"
+  },
+  "homepage": "https://github.com/DarkScorpion/React-OpenWeather-component",
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "react": "^0.14.7"
+  }
+}

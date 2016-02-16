@@ -1,6 +1,10 @@
 #config file
 config.json
 
+#bundle files
+bundle.js
+bundle.js.map
+
 #Sublime Text
 *.sublime-project
 *.sublime-workspace
@@ -32,4 +36,3 @@ Desktop.ini
 
 # Mac crap
 .DS_Store
-/.project

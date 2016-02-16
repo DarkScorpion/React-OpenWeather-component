@@ -1,5 +1,9 @@
 'use strict';
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
+
+var React = require('react');
+var jQuery = require('jquery');
+
 var ReactWeather = React.createClass({
   getInitialState: function() {
     var notSet = '??';
@@ -83,7 +87,7 @@ var ReactWeather = React.createClass({
 
     console.log('Query: %o', query);
 
-    $.get(url, query, function(data) {
+    jQuery.get(url, query, function(data) {
       if ( self.isMounted() ) {
         self.setState({
           currentCity: city,
@@ -179,7 +183,4 @@ var ReactWeather = React.createClass({
 
 });
 
-ReactDOM.render(
-  <ReactWeather appID='44db6a862fba0b067b1930da0d769e98' />,
-  document.getElementById('ReactWeather')
-);
+module.exports = ReactWeather;

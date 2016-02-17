@@ -3,14 +3,14 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: path.join(__dirname, '/src/main.jsx'),
+  entry: path.join(__dirname, '/src/main.js'),
   output: {
     path: path.join(__dirname),
     filename: 'bundle.js',
   },
   module: {
     loaders: [{
-      test: /\.jsx?$/,
+      test: /\.js?$/,
       loader: 'babel',
       query: {
         presets: ['react', 'es2015']

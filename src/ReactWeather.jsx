@@ -2,7 +2,7 @@
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
 
 var React = require('react');
-var jQuery = require('jquery');
+var request = require('./jquery-ajax.js');
 
 var ReactWeather = React.createClass({
   getInitialState: function() {
@@ -87,7 +87,7 @@ var ReactWeather = React.createClass({
 
     console.log('Query: %o', query);
 
-    jQuery.get(url, query, function(data) {
+    request.get(url, query, function(data) {
       if ( self.isMounted() ) {
         self.setState({
           currentCity: city,

@@ -1,11 +1,11 @@
 
 var path = require('path');
-var webpack = require('webpack');
+//var webpack = require('webpack');
 
 module.exports = {
   entry: path.join(__dirname, '/src/main.js'),
   output: {
-    path: path.join(__dirname),
+    path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
   },
   module: {
@@ -15,6 +15,9 @@ module.exports = {
       query: {
         presets: ['react', 'es2015']
       }
+    }, {
+      test: /\.css?$/,
+      loader: 'style!css',
     }]
   },
   plugins: [
@@ -22,4 +25,4 @@ module.exports = {
   ]
 };
 
-console.log('Run Webpack!');
+console.log('Webpack start build!');

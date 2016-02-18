@@ -1,9 +1,8 @@
 #config file
 config.json
 
-#bundle files
-bundle.js
-bundle.js.map
+#Output folder
+/build/
 
 #Sublime Text
 *.sublime-project

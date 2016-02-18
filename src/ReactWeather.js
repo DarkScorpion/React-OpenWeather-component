@@ -2,6 +2,7 @@
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
 
 var React = require('react');
+var style = require('./styles.css');
 var request = require('./jquery-ajax.js');
 
 var ReactWeather = React.createClass({
@@ -163,7 +164,7 @@ var ReactWeather = React.createClass({
     console.log('Render state: %o', state);
     
     return (
-      <div>
+      <div style={style}>
         <h4>{state.currentCity}</h4>
         <div>{icon}</div>
         <div>

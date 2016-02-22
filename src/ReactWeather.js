@@ -164,7 +164,7 @@ var ReactWeather = React.createClass({
     console.log('Render state: %o', state);
     
     return (
-      <div style={style}>
+      <div className="ReactWeather">
         <h4>{state.currentCity}</h4>
         <div>{icon}</div>
         <div>

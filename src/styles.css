@@ -1,9 +1,9 @@
 
-div {
+.ReactWeather div {
   margin: 5px;
 }
 
-input {
+.ReactWeather input {
   margin: 5px;
   border-radius: 5px;
 }

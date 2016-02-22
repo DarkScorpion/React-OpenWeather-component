@@ -1,6 +1,5 @@
 
 var path = require('path');
-//var webpack = require('webpack');
 
 module.exports = {
   entry: path.join(__dirname, '/src/main.js'),
@@ -20,9 +19,7 @@ module.exports = {
       loader: 'style!css',
     }]
   },
-  plugins: [
-    //new webpack.optimize.UglifyJsPlugin({ compress: {warnings: false} })
-  ]
+  plugins: []
 };
 
 console.log('Webpack start build!');

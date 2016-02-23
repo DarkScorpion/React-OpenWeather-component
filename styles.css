@@ -8,7 +8,8 @@ input {
   border-radius: 5px;
 }
 
-.cityNames {
+.cityNames,
+.selectCity {
   margin: 5px;
   padding: 2px;
   border: 1px solid;
@@ -16,9 +17,5 @@ input {
 }
 
 .selectCity {
-  margin: 5px;
-  padding: 2px;
-  border: 1px solid;
-  border-radius: 5px;
   background-color: #00FF33;
 }

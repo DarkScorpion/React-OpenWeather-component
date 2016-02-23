@@ -2,7 +2,7 @@
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
 
 var React = require('react');
-var style = require('./styles.css');
+var style = require('./styles.styl');
 var request = require('./jquery-ajax.js');
 
 var ReactWeather = React.createClass({

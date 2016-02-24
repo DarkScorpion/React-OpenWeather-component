@@ -3,7 +3,7 @@
 
 var React = require('react');
 var style = require('./styles.styl');
-var request = require('./jquery-ajax.js');
+var request = require('../modules/jquery-ajax.js');
 
 var ReactWeather = React.createClass({
   getInitialState: function() {

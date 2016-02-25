@@ -1,12 +1,14 @@
 'use strict';
 //Copyright (c) 2016 Александр Смит (https://github.com/DarkScorpion)
+
 class ReactWeather extends React.Component {
   constructor(props) {
     super(props);
-    var notSet = '??';
+    var notSet = this.props.notSet || '??';
     this.state = {
       citiesArr: [],
-      currentCity: notSet,
+      notSet: notSet,
+      currentCity: this.props.start || notSet,
       temp: notSet,
       icon: notSet,
       pressure: notSet,
@@ -19,8 +21,14 @@ class ReactWeather extends React.Component {
   }
 
   componentDidMount() {
-    this._getGeoOfUser();
+    var state = this.state;
     this._getCitysFromStorage();
+
+    if(state.currentCity === state.notSet) {
+      this._getGeoOfUser();
+    } else {
+      this._updateWeatherState(state.currentCity)
+    }
   }
 
   componentDidUpdate() {
@@ -75,13 +83,13 @@ class ReactWeather extends React.Component {
 
     var city = '';
     var query = { appid: appID };
-    if (typeof arg === 'object') {
+    if (typeof arg === 'object' && typeof arg !== null) {
       query.lat = arg.lat;
       query.lon = arg.lon;
       city = 'Weather in the place where you are!';
     } else {
-      query.q = arg;
       city = arg;
+      query.q = arg;
     }
 
     console.log('Query: %o', query);
@@ -105,10 +113,8 @@ class ReactWeather extends React.Component {
   }
 
   _getIcon() {
-    var notSet = '??';
-    var state= this.state;
-
-    if(state.currentCity !== notSet) {
+    var state = this.state;
+    if(state.currentCity !== state.notSet) {
       var iconLink = 'http://openweathermap.org/img/w/'+state.icon+'.png';
       return <img src={iconLink} />
     } else {
@@ -176,10 +182,10 @@ class ReactWeather extends React.Component {
       </div>
     );
   }
-
 };
 
+
 ReactDOM.render(
-  <ReactWeather appID='44db6a862fba0b067b1930da0d769e98' />,
+  <ReactWeather appID='44db6a862fba0b067b1930da0d769e98' /*start="London" notSet="????"*/ />,
   document.getElementById('ReactWeather')
 );

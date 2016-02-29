@@ -1,0 +1,21 @@
+
+div {
+  margin: 5px;
+}
+
+input {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.cityNames,
+.selectCity {
+  margin: 5px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.selectCity {
+  background-color: #00FF33;
+}

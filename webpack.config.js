@@ -1,5 +1,17 @@
 
+var isDeploy = inArgs('--deploy');
+
 var path = require('path');
+var webpack = require('webpack');
+
+var devPlagins = [
+  new webpack.DefinePlugin({
+    'ENV_isDeploy': JSON.stringify(isDeploy)
+  })
+];
+var deployPlagins = [
+  new webpack.optimize.UglifyJsPlugin({ compress: {warnings: false} })
+];
 
 module.exports = {
   entry: path.join(__dirname, '/src/main.js'),
@@ -7,6 +19,7 @@ module.exports = {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
   },
+  
   module: {
     loaders: [{
       test: /\.js?$/,
@@ -20,7 +33,11 @@ module.exports = {
       loader: 'style!css!stylus',
     }]
   },
-  plugins: []
+
+  plugins: isDeploy ? devPlagins.concat(deployPlagins) : devPlagins,
+  devtool: isDeploy ? null : 'eval'
 };
 
-console.log('Webpack start build!');
+function inArgs(str) {
+  return (process.argv.indexOf(str) > -1);
+}

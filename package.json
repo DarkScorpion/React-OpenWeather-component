@@ -5,6 +5,7 @@
   "main": "ReactWeather.js",
   "scripts": {
     "build": "webpack --progress",
+    "deploy": "webpack --deploy",
     "info": "webppack --profile --display-modules --display-reasons",
     "dev": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -54,7 +54,6 @@ class ReactWeather extends React.Component {
     });
   }
 
-
   _setCitysToStorage() {
     localStorage.citiesArr = JSON.stringify(this.state.citiesArr);
   }

@@ -22,10 +22,6 @@ class ReactWeather extends React.Component {
       pressure: notSet,
       humidity: notSet
     };
-
-    this.addCityHanler = this.addCityHanler.bind(this);
-    this.removeCityHandler = this.removeCityHandler.bind(this);
-    this.cityClickHandler = this.cityClickHandler.bind(this);
   }
 
   componentDidMount() {
@@ -115,7 +111,11 @@ class ReactWeather extends React.Component {
   _getCitiesLine() {
     return this.state.citiesArr.map((value, key) => {
       var className = (value === this.state.currentCity) ? 'selectCity' : 'cityNames';
-      return ( <span className={className} key={key} onClick={this.cityClickHandler}>{value}</span> )
+      return (
+        <span className={className} key={key} onClick={this.cityClickHandler.bind(this)}>
+          {value}
+        </span>
+      )
     });
   }
 
@@ -182,8 +182,8 @@ class ReactWeather extends React.Component {
         </div>
         <div>
           <input type='text' id='addCity' /> <br/>
-          <input type='submit' value='Add' onClick={this.addCityHanler} />
-          <input type='submit' value='Remove' onClick={this.removeCityHandler} />
+          <input type='submit' value='Add' onClick={this.addCityHanler.bind(this)} />
+          <input type='submit' value='Remove' onClick={this.removeCityHandler.bind(this)} />
         </div>
         <div>{citiesLine}</div>
       </div>

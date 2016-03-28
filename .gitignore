@@ -1,5 +1,5 @@
 #config file
-config.json
+/config.js
 
 #Output folder
 /build/

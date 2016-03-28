@@ -2,13 +2,19 @@
 
 React component that implements the basic functions of weather display on the user's location and the selected cities.
 
-For test use commands
+For build use commands
 ```sh
 $ npm i
 $ npm run build
 ```
 
-### Different branches of the project:
+#### Struct of config.js
+```javascript
+module.exports = {
+  "appID": "you OpenWeather appID"
+}
+```
+#### Different branches of the project:
 
 * [m] [m-branch]: The first branch of the project includes the implementation of a standard javascript with Strict Mode.  
 * [es6] [es6-branch]: component is written using standard ES2015.  

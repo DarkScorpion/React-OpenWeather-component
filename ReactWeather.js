@@ -91,15 +91,32 @@ var ReactWeather = React.createClass({
 
     console.log('Query: %o', query);
 
-    $.get(url, query, function(data) {
-      if ( self.isMounted() ) {
-        self.setState({
-          currentCity: city,
-          temp: data.main.temp,
-          icon: data.weather[0].icon,
-          pressure: data.main.pressure,
-          humidity: data.main.humidity
-        });
+    $.ajax({
+      url: url,
+      data: query,
+      success: function(data){
+        if ( self.isMounted() ) {
+          self.setState({
+            currentCity: city,
+            temp: data.main.temp,
+            icon: data.weather[0].icon,
+            pressure: data.main.pressure,
+            humidity: data.main.humidity
+          });
+        }
+      },
+      error: function(req, status, err) {
+        console.log(req.responseText);
+        var notSet = self.state.notSet;
+        if ( self.isMounted() ) {
+          self.setState({
+            //currentCity: city,
+            temp: notSet,
+            icon: notSet,
+            pressure: notSet,
+            humidity: notSet
+          });
+        }
       }
     });
   },

@@ -97,14 +97,29 @@ class ReactWeather extends React.Component {
 
     console.log('Query: %o', query);
 
-    jQuery.get(url, query, (data) => {
-      this.setState({
-        currentCity: city,
-        temp: data.main.temp,
-        icon: data.weather[0].icon,
-        pressure: data.main.pressure,
-        humidity: data.main.humidity
-      });
+    $.ajax({
+      url: url,
+      data: query,
+      success: (data) => {
+        this.setState({
+          currentCity: city,
+          temp: data.main.temp,
+          icon: data.weather[0].icon,
+          pressure: data.main.pressure,
+          humidity: data.main.humidity
+        });
+      },
+      error: (req, status, err) => {
+        console.log(req.responseText);
+        var notSet = this.state.notSet;
+        this.setState({
+          //currentCity: city,
+          temp: notSet,
+          icon: notSet,
+          pressure: notSet,
+          humidity: notSet
+        });
+      }
     });
   }
 

@@ -113,7 +113,7 @@ class ReactWeather extends React.Component {
         console.log(req.responseText);
         var notSet = this.state.notSet;
         this.setState({
-          //currentCity: city,
+          currentCity: notSet,
           temp: notSet,
           icon: notSet,
           pressure: notSet,

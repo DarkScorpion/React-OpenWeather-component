@@ -24,7 +24,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
-     publicPath: '/build/'
+    publicPath: '/build/'
   },
 
   plugins: isDeploy ? commonPlagins.concat(deployPlagins) : commonPlagins.concat(devPlagins),

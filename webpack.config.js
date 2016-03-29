@@ -17,10 +17,9 @@ var deployPlagins = [
 ];
 
 module.exports = {
-  entry: [
-    'webpack-dev-server/client',
+  entry: setEntrySources([
     path.join(__dirname, '/src/main.js')
-  ],
+  ]),
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
@@ -48,4 +47,28 @@ module.exports = {
 
 function isArgs(str) {
   return (process.argv.indexOf(str) > -1);
+}
+
+function setEntrySources(sources) {
+  if(!isDeploy) {
+    switch(typeof sources) {
+    case('object'):
+      var tempObj = {};
+      for(var key in sources) {
+        tempObj[key] = setEntrySources(sources[key]);
+      }
+      return tempObj;
+    case('array'):
+      var tempArr = ['webpack-dev-server/client'];
+      tempArr.concat(sources);
+      return tempArr;
+    case('string'):
+      var tempArrStr = ['webpack-dev-server/client'];
+      tempArrStr.push(sources);
+      return tempArrStr;
+    default:
+      return sources;
+    }
+  }
+  return sources;
 }

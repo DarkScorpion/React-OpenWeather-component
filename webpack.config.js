@@ -1,12 +1,12 @@
 
-var isDeploy = isArgs('--deploy');
-
 var path = require('path');
 var webpack = require('webpack');
 
+var isDeploy = isArgs('--deploy');
+
 var commonPlagins = [
   new webpack.DefinePlugin({
-    'ENV_isDeploy': JSON.stringify(isDeploy)
+    'ENV_isDeploy': isDeploy ? 'production' : 'dev'
   })
 ];
 var devPlagins = [
@@ -18,7 +18,7 @@ var deployPlagins = [
 
 module.exports = {
   entry: setEntrySources([
-    path.join(__dirname, '/src/main.js')
+    path.join(__dirname, '/src/index.js')
   ]),
   output: {
     path: path.join(__dirname, '/build'),
@@ -42,7 +42,11 @@ module.exports = {
     }]
   },
 
-  //devtool: isDeploy ? null : 'eval',
+  resolve: {
+    modulesDirectories: ['node_modules', 'modules']
+  },
+
+  //devtool: isDeploy ? null : '#cheap-module-eval-source-map'
 };
 
 function isArgs(str) {

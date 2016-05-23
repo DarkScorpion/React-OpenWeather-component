@@ -8,6 +8,7 @@ class ReactWeather extends React.Component {
     this.state = {
       citiesArr: [],
       notSet: notSet,
+      inputCity: '',
       currentCity: this.props.start || notSet,
       temp: notSet,
       icon: notSet,
@@ -89,7 +90,6 @@ class ReactWeather extends React.Component {
     }
 
     console.log('Query: %o', query);
-
     $.ajax({
       url: url,
       data: query,
@@ -106,7 +106,7 @@ class ReactWeather extends React.Component {
         console.log(req.responseText);
         var notSet = this.state.notSet;
         this.setState({
-          //currentCity: city,
+          currentCity: notSet,
           temp: notSet,
           icon: notSet,
           pressure: notSet,
@@ -152,11 +152,17 @@ class ReactWeather extends React.Component {
     }
   }
 
+  inputCityHandler(event) {
+    var value = event.target.value;
+    this.setState({
+      inputCity: value
+    });
+  }
+
   addCityHanler(event) {
-    var input = document.getElementById("addCity").value;
+    var input = this.state.inputCity;
 
     console.log('addCityHanler: %s', input);
-
     if(input !== '') {
       this.setState(function(state) {
         var temp = state.citiesArr;
@@ -178,7 +184,6 @@ class ReactWeather extends React.Component {
     var citiesLine = this._getCitiesLine();
 
     console.log('Render state: %o', state);
-    
     return (
       <div>
         <h4>{state.currentCity}</h4>
@@ -189,7 +194,7 @@ class ReactWeather extends React.Component {
           <span>Temperature: {state.temp} </span><br/>
         </div>
         <div>
-          <input type='text' id='addCity' /> <br/>
+          <input type='text' onChange={this.inputCityHandler.bind(this)} /> <br/>
           <input type='submit' value='Add' onClick={this.addCityHanler.bind(this)} />
           <input type='submit' value='Remove' onClick={this.removeCityHandler.bind(this)} />
         </div>
@@ -201,6 +206,6 @@ class ReactWeather extends React.Component {
 
 
 ReactDOM.render(
-  <ReactWeather appID='b1b15e88fa797225412429c1c50c122a' /*start="London" notSet="????"*/ />,
+  <ReactWeather appID='b1b15e88fa797225412429c1c50c122a' /* start="London" notSet="????"*/ />,
   document.getElementById('ReactWeather')
 );

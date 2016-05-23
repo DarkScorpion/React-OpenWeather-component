@@ -7,6 +7,7 @@ var ReactWeather = React.createClass({
     return {
       citiesArr: [],
       notSet: notSet,
+      inputCity: '',
       currentCity: this.props.start || notSet,
       temp: notSet,
       icon: notSet,
@@ -110,7 +111,7 @@ var ReactWeather = React.createClass({
         var notSet = self.state.notSet;
         if ( self.isMounted() ) {
           self.setState({
-            //currentCity: city,
+            currentCity: notSet,
             temp: notSet,
             icon: notSet,
             pressure: notSet,
@@ -155,8 +156,15 @@ var ReactWeather = React.createClass({
     }
   },
 
+  inputCityHandler: function(event) {
+    var value = event.target.value;
+    this.setState({
+      inputCity: value
+    });
+  },
+
   addCityHanler: function(event) {
-    var input = document.getElementById("addCity").value;
+    var input = this.state.inputCity;
 
     console.log('addCityHanler: %s', input);
 
@@ -192,7 +200,7 @@ var ReactWeather = React.createClass({
           <span>Temperature: {state.temp} </span><br/>
         </div>
         <div>
-          <input type='text' id='addCity' /> <br/>
+          <input type='text' onChange={this.inputCityHandler} /> <br/>
           <input type='submit' value='Add' onClick={this.addCityHanler} />
           <input type='submit' value='Remove' onClick={this.removeCityHandler} />
         </div>
